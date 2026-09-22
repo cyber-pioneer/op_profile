@@ -1,1 +1,58 @@
 [DEBUG] flag_gems.ops.zeros.zeros: GEMS ZEROS
+[DEBUG] flag_gems.ops.lift_fresh.lift_fresh: GEMS LIFT_FRESH
+[DEBUG] flag_gems.ops.zeros.zero_: GEMS ZERO_
+[DEBUG] flag_gems.ops.normal.normal_: GEMS NORMAL_
+[DEBUG] flag_gems.ops.arange.arange_start: GEMS ARANGE
+[DEBUG] flag_gems.ops.div.true_divide: GEMS TRUE_DIVIDE
+[DEBUG] flag_gems.ops.pow.pow_scalar: GEMS POW_SCALAR
+[DEBUG] flag_gems.ops.reciprocal.reciprocal: GEMS RECIPROCAL
+[DEBUG] flag_gems.ops.mul.mul: GEMS MUL
+[DEBUG] flag_gems.ops.unsqueeze.unsqueeze: GEMS UNSQUEEZE
+[DEBUG] flag_gems.ops.cos.cos: GEMS COS
+[DEBUG] flag_gems.ops.sin.sin: GEMS SIN
+[DEBUG] flag_gems.ops._has_compatible_shallow_copy_type._has_compatible_shallow_copy_type: GEMS _HAS_COMPATIBLE_SHALLOW_COPY_TYPE
+[DEBUG] flag_gems.ops.ones.ones: GEMS ONES
+[DEBUG] vllm_fl.dispatch.ops.attention_backend: default.flagos
+[DEBUG] flag_gems.ops.narrow.narrow: GEMS NARROW
+[DEBUG] flag_gems.ops.expand_as.expand_as: GEMS EXPAND_AS
+[DEBUG] flag_gems.ops.transpose.transpose: GEMS TRANSPOSE
+[DEBUG] flag_gems.ops.addmm.addmm: GEMS ADDMM, [shape info]: [-, 65536, 1152, 1536](batch, M, N, K), [A column-major]: False, [B column-major]: True, [bias column-major]: True
+[DEBUG] flag_gems.ops.broadcast_to.broadcast_to: GEMS BROADCAST_TO
+[DEBUG] flag_gems.ops.chunk.chunk: GEMS CHUNK
+[DEBUG] flag_gems.ops.flatten.flatten: GEMS FLATTEN
+[DEBUG] flag_gems.ops.add.add: GEMS ADD
+[DEBUG] flag_gems.ops.native_layer_norm.native_layer_norm: GEMS NATIVE_LAYER_NORM
+[DEBUG] flag_gems.ops.layernorm.layer_norm: GEMS LAYERNORM FORWARD
+[DEBUG] flag_gems.ops._reshape_alias._reshape_alias: GEMS _RESHAPE_ALIAS
+[DEBUG] flag_gems.ops.sub.sub: GEMS SUB
+[DEBUG] flag_gems.ops.unbind.unbind: GEMS UNBIND
+[DEBUG] flag_gems.ops.gelu.gelu: GEMS GELU FORWARD
+[DEBUG] flag_gems.ops.randn.randn: GEMS RANDN
+[DEBUG] flag_gems.ops.exp.exp: GEMS EXP
+[DEBUG] flag_gems.ops.sigmoid.sigmoid: GEMS SIGMOID FORWARD
+[DEBUG] vllm_fl.dispatch.ops.topk_softmax: default.flagos
+[DEBUG] flag_gems.fused.topk_softmax.topk_softmax: GEMS TOPK SOFTMAX
+[DEBUG] flag_gems.fused.fused_moe.fused_experts_impl: GEMS FUSED MOE
+[DEBUG] flag_gems.fused.fused_moe.get_moe_configs: No embedded MoE config for device=NVIDIA_H100_80GB_HBM3, key=256,256,bf16,0,0. Will use default config.
+[DEBUG] flag_gems.fused.moe_align_block_size.moe_align_block_size_triton: GEMS MOE ALIGN BLOCK SIZE
+[DEBUG] flag_gems.ops.rand_like.rand_like: GEMS RAND_LIKE
+[DEBUG] flag_gems.ops._unsafe_view._unsafe_view: GEMS UNSAFE_VIEW
+[DEBUG] flag_gems.ops.alias.alias: GEMS ALIAS
+[DEBUG] flag_gems.ops.full.full: GEMS FULL
+[DEBUG] flag_gems.ops.argmax.argmax: GEMS ARGMAX
+[DEBUG] flag_gems.ops.lt.lt_scalar: GEMS LT SCALAR
+[DEBUG] flag_gems.ops.scalar_tensor.scalar_tensor: GEMS SCALAR_TENSOR
+[DEBUG] flag_gems.ops.where.where_self: GEMS WHERE_SELF
+[DEBUG] flag_gems.ops.where.where_self_out: GEMS WHERE_SELF_OUT
+[DEBUG] flag_gems.ops.div.true_divide_: GEMS TRUE_DIVIDE_
+[DEBUG] flag_gems.ops.softmax.softmax: GEMS SOFTMAX
+[DEBUG] flag_gems.ops.softmax.softmax_out: GEMS SOFTMAX_OUT
+[DEBUG] flag_gems.ops.exponential_.exponential_: GEMS EXPONENTIAL_
+[DEBUG] flag_gems.fused.moe_sum.moe_sum: GEMS MOE SUM
+[DEBUG] flag_gems.ops.expand.expand: GEMS EXPAND
+[DEBUG] flag_gems.ops.diff.diff: GEMS DIFF
+[DEBUG] flag_gems.ops.gt.gt_scalar: GEMS GT SCALAR
+[DEBUG] flag_gems.ops.embedding.embedding: GEMS EMBEDDING FORWARD
+[DEBUG] flag_gems.ops.masked_fill.masked_fill_: GEMS MASKED FILL
+[DEBUG] flag_gems.ops.bitwise_not.bitwise_not: GEMS BITWISE NOT
+[DEBUG] flag_gems.ops.scatter.scatter_: GEMS SCATTER_
