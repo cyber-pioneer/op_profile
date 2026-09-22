@@ -1,0 +1,13 @@
+{
+  "model": "deepseek-v4-flash",
+  "concurrency": 64,
+  "input_tokens_per_request": 4096,
+  "output_tokens_per_request": 256,
+  "request_count": 64,
+  "total_input_tokens": 262144,
+  "total_output_tokens": 16384,
+  "batch_wall_time_seconds": 22.02533881099953,
+  "min_request_latency_seconds": 19.956151151000086,
+  "max_request_latency_seconds": 21.995974424999076,
+  "avg_request_latency_seconds": 20.315827247343776
+}
