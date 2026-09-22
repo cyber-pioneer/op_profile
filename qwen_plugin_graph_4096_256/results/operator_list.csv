@@ -1,21 +1,21 @@
-operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent
+operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 1,aten::_index_put_impl_,aten,"void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1}>(long, at::native::gpu_index_kernel<at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1})",0.06
-2,aten::add,aten,add_func_kernel_rank_1,<0.01%
+2,aten::add,aten,add_func_kernel_rank_1,<0.01
 3,aten::argmax,aten,argmax_kernel_inner,0.23
 4,aten::bitwise_not,aten,bitwise_not_func_kernel_rank_1,0.01
 5,aten::cat,aten,"void at::native::(anonymous namespace)::CatArrayBatchedCopy_vectorized<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 1, 128, 1, 16, 8>(char*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",0.02
 5,aten::cat,aten,"void at::native::(anonymous namespace)::CatArrayBatchedCopy_vectorized<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 2, 128, 1, 16, 8>(char*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",0.25
-6,aten::copy_,aten,"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1} const&)::{lambda(int)#1})",<0.01%
+6,aten::copy_,aten,"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1} const&)::{lambda(int)#1})",<0.01
 6,aten::copy_,aten,"void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}>(at::TensorIteratorBase&, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1} const&)::{lambda(int)#1})",0.23
-6,aten::copy_,aten,"void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#3}::operator()() const::{lambda(int)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#3}::operator()() const::{lambda(int)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",<0.01%
+6,aten::copy_,aten,"void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#3}::operator()() const::{lambda(int)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#3}::operator()() const::{lambda(int)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",<0.01
 6,aten::copy_,aten,"void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#4}::operator()() const::{lambda(long)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",0.07
 6,aten::copy_,aten,"void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",0.15
-7,aten::embedding,aten,embedding_kernel,<0.01%
+7,aten::embedding,aten,embedding_kernel,<0.01
 8,aten::exp,aten,exp_func_kernel_rank_1,0.02
 9,aten::fill_,aten,fill_scalar_kernel,0.02
-10,aten::full,aten,full_func_scalar_kernel_rank_1,<0.01%
-11,aten::gt,aten,gt_func_scalar_kernel_rank_1,<0.01%
-12,aten::index,aten,"void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1}>(long, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1})",<0.01%
+10,aten::full,aten,full_func_scalar_kernel_rank_1,<0.01
+11,aten::gt,aten,gt_func_scalar_kernel_rank_1,<0.01
+12,aten::index,aten,"void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1}>(long, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1})",<0.01
 12,aten::index,aten,"void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<4> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<4> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1}>(long, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<4> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<4> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1})",0.01
 12,aten::index,aten,"void at::native::vectorized_gather_kernel<16, long>(char*, char*, long*, int, long, long, long, long, bool)",0.05
 13,aten::masked_fill_,aten,masked_fill_kernel_kernel_rank_2,0.01
@@ -23,26 +23,26 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent
 14,aten::mm,aten,gemv_kernel,0.28
 14,aten::mm,aten,mm_kernel_general_host_tma,35.47
 15,aten::mul,aten,mul_broadcast_2d_kernel,0.35
-16,aten::scatter_,aten,_scatter_jit_function,<0.01%
+16,aten::scatter_,aten,_scatter_jit_function,<0.01
 17,aten::sigmoid,aten,sigmoid_forward_kernel_rank_1,0.02
-18,aten::sub,aten,sub_func_tensor_scalar_kernel_rank_1,<0.01%
+18,aten::sub,aten,sub_func_tensor_scalar_kernel_rank_1,<0.01
 19,aten::zero_,aten,zeros_kernel,0.16
 20,aten::zeros,aten,zeros_kernel,0.03
 21,triton_per_fused_1,triton_compiled,triton_per_fused_1,0.40
 21,null,triton_compiled,triton_per_fused_1,0.23
 22,triton_poi_fused_0,triton_compiled,triton_poi_fused_0,0.23
 22,null,triton_compiled,triton_poi_fused_0,0.21
-23,triton_poi_fused_2,triton_compiled,triton_poi_fused_2,<0.01%
-23,null,triton_compiled,triton_poi_fused_2,<0.01%
-24,triton_poi_fused_3,triton_compiled,triton_poi_fused_3,<0.01%
+23,triton_poi_fused_2,triton_compiled,triton_poi_fused_2,<0.01
+23,null,triton_compiled,triton_poi_fused_2,<0.01
+24,triton_poi_fused_3,triton_compiled,triton_poi_fused_3,<0.01
 24,null,triton_compiled,triton_poi_fused_3,0.03
 25,triton_poi_fused_5,triton_compiled,triton_poi_fused_5,0.09
 25,null,triton_compiled,triton_poi_fused_5,0.11
 26,triton_poi_fused_7,triton_compiled,triton_poi_fused_7,0.13
 26,null,triton_compiled,triton_poi_fused_7,0.07
-27,triton_poi_fused___and_____or___add_bitwise_not_ge_lt_mul_sub_0,triton_compiled,triton_poi_fused___and_____or___add_bitwise_not_ge_lt_mul_sub_0,<0.01%
-28,triton_poi_fused___and_____or___add_ge_lt_mul_sub_0,triton_compiled,triton_poi_fused___and_____or___add_ge_lt_mul_sub_0,<0.01%
-29,triton_poi_fused___and_____or___bitwise_not_ge_lt_1,triton_compiled,triton_poi_fused___and_____or___bitwise_not_ge_lt_1,<0.01%
+27,triton_poi_fused___and_____or___add_bitwise_not_ge_lt_mul_sub_0,triton_compiled,triton_poi_fused___and_____or___add_bitwise_not_ge_lt_mul_sub_0,<0.01
+28,triton_poi_fused___and_____or___add_ge_lt_mul_sub_0,triton_compiled,triton_poi_fused___and_____or___add_ge_lt_mul_sub_0,<0.01
+29,triton_poi_fused___and_____or___bitwise_not_ge_lt_1,triton_compiled,triton_poi_fused___and_____or___bitwise_not_ge_lt_1,<0.01
 30,triton_poi_fused__to_copy__unsafe_view_add_clone_linear_mean_mul_pow_rsqrt_silu_view_2,triton_compiled,triton_poi_fused__to_copy__unsafe_view_add_clone_linear_mean_mul_pow_rsqrt_silu_view_2,0.24
 30,null,triton_compiled,triton_poi_fused__to_copy__unsafe_view_add_clone_linear_mean_mul_pow_rsqrt_silu_view_2,0.13
 31,triton_poi_fused_add_2,triton_compiled,triton_poi_fused_add_2,0.13
@@ -50,11 +50,11 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent
 32,triton_poi_fused_add_4,triton_compiled,triton_poi_fused_add_4,0.37
 32,null,triton_compiled,triton_poi_fused_add_4,0.15
 33,triton_poi_fused_mul_sigmoid_view_0,triton_compiled,triton_poi_fused_mul_sigmoid_view_0,0.01
-33,null,triton_compiled,triton_poi_fused_mul_sigmoid_view_0,<0.01%
+33,null,triton_compiled,triton_poi_fused_mul_sigmoid_view_0,<0.01
 34,triton_poi_fused_mul_silu_slice_0,triton_compiled,triton_poi_fused_mul_silu_slice_0,0.14
 34,null,triton_compiled,triton_poi_fused_mul_silu_slice_0,0.31
-35,triton_red_fused_1,triton_compiled,triton_red_fused_1,<0.01%
-35,null,triton_compiled,triton_red_fused_1,<0.01%
+35,triton_red_fused_1,triton_compiled,triton_red_fused_1,<0.01
+35,null,triton_compiled,triton_red_fused_1,<0.01
 36,triton_red_fused_6,triton_compiled,triton_red_fused_6,0.06
 36,null,triton_compiled,triton_red_fused_6,0.05
 37,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_moe_forward_shared_1,triton_compiled,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_moe_forward_shared_1,0.30
@@ -65,7 +65,7 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent
 39,null,fused_communication_compute,"void flashinfer::trtllm_allreduce_fusion::allreduce_fusion_kernel_oneshot_lamport<(flashinfer::trtllm_allreduce_fusion::AllReduceFusionPattern)1, __nv_bfloat16, 2, true, true>(flashinfer::trtllm_allreduce_fusion::AllReduceFusionParams<__nv_bfloat16>)",0.93
 40,vllm::qwen_gdn_attention_core,custom,_causal_conv1d_fwd_kernel,0.70
 41,null,unattributed,_causal_conv1d_update_kernel,0.31
-42,null,unattributed,_compute_num_computed_tokens_kernel,<0.01%
+42,null,unattributed,_compute_num_computed_tokens_kernel,<0.01
 43,null,unattributed,_compute_slot_mapping_graph_kernel,0.01
 44,vllm::qwen_gdn_attention_core,custom,_fused_post_conv_kernel,0.53
 45,null,unattributed,_fused_recurrent_gated_delta_rule_packed_decode_kernel_fp32_beta,3.78
@@ -80,7 +80,7 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent
 52,null,unattributed,kernel_unified_attention,2.97
 53,null,unattributed,memcpy32_post,0.31
 54,null,unattributed,mm_kernel_general_host_tma,5.39
-55,vllm::moe_forward_shared,custom,moe_sum_kernel,<0.01%
+55,vllm::moe_forward_shared,custom,moe_sum_kernel,<0.01
 55,null,unattributed,moe_sum_kernel,0.29
 56,null,unattributed,mul_broadcast_2d_kernel,0.25
 57,null,unattributed,reduce_segments,0.16
