@@ -359,3 +359,7 @@ WARNING 09-22 06:39:58 [interface.py:358] Failed to import from vllm._C: ModuleN
 (Worker_TP0 pid=17058) INFO 09-22 06:44:36 [wrapper.py:66] Profiler stopped successfully.
 (APIServer pid=16627) INFO 09-22 06:44:36 [api_router.py:33] Profiler stopped.
 (APIServer pid=16627) INFO:     127.0.0.1:38148 - "POST /stop_profile HTTP/1.1" 200 OK
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1328 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib/python3.12/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 4 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
