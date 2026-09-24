@@ -1,0 +1,13 @@
+{
+  "model": "qwen",
+  "concurrency": 64,
+  "input_tokens_per_request": 4096,
+  "output_tokens_per_request": 256,
+  "request_count": 64,
+  "total_input_tokens": 262144,
+  "total_output_tokens": 16384,
+  "batch_wall_time_seconds": 22.60678482998628,
+  "min_request_latency_seconds": 20.212050959002227,
+  "max_request_latency_seconds": 22.59248919901438,
+  "avg_request_latency_seconds": 21.480432543718962
+}
