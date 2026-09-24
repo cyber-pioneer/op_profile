@@ -6,8 +6,8 @@
   "request_count": 64,
   "total_input_tokens": 262144,
   "total_output_tokens": 16384,
-  "batch_wall_time_seconds": 6.508645232999697,
-  "min_request_latency_seconds": 6.157619517005514,
-  "max_request_latency_seconds": 6.480993987002876,
-  "avg_request_latency_seconds": 6.351721903592988
+  "batch_wall_time_seconds": 6.922303164988989,
+  "min_request_latency_seconds": 6.585517078987323,
+  "max_request_latency_seconds": 6.900221968011465,
+  "avg_request_latency_seconds": 6.765143291314416
 }

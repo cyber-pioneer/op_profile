@@ -1,5 +1,5 @@
 operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
-1,aten::_index_put_impl_,aten,"void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1}>(long, at::native::gpu_index_kernel<at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1})",0.08
+1,aten::_index_put_impl_,aten,"void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1}>(long, at::native::gpu_index_kernel<at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_put_kernel_impl<at::native::OpaqueType<4> >(at::TensorIterator&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1})",0.09
 2,aten::add,aten,add_func_kernel_rank_1,0.01
 3,aten::argmax,aten,argmax_kernel_inner,0.31
 4,aten::bitwise_not,aten,bitwise_not_func_kernel_rank_1,0.02
@@ -21,7 +21,7 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 13,aten::masked_fill_,aten,masked_fill_kernel_kernel_rank_2,0.02
 13,aten::masked_fill_,aten,masked_fill_kernel_kernel_rank_4,0.05
 14,aten::mm,aten,gemv_kernel,0.40
-14,aten::mm,aten,mm_kernel_general_host_tma,11.26
+14,aten::mm,aten,mm_kernel_general_host_tma,11.24
 15,aten::mul,aten,mul_broadcast_2d_kernel,0.49
 16,aten::scatter_,aten,_scatter_jit_function,<0.01
 17,aten::sigmoid,aten,sigmoid_forward_kernel_rank_1,0.03
@@ -29,12 +29,12 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 19,aten::zero_,aten,zeros_kernel,0.23
 20,aten::zeros,aten,zeros_kernel,0.04
 21,vllm::qwen_gdn_attention_core,custom,"void cutlass::device_kernel<flat::kernel::FlatKernelTmaWarpSpecializedDeltaRule<flat::collective::FlatMainloopTmaWarpSpecializedDeltaRule<cutlass::bfloat16_t, float, float, cute::tuple<cute::C<64>, cute::C<64>, cute::C<128> >, cute::tuple<long, cute::C<1>, int>, cute::tuple<long, cute::C<1>, int>, cute::tuple<long, cute::C<1>, int>, cute::tuple<long, cute::C<1>, int>, std::tuple<flat::kernel::Option<(flat::kernel::Tag)1, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)11, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)10, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)9, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)12, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)13, cute::C<false> > > >, flat::kernel::IndividualTileScheduler<flat::kernel::GVATag>, std::tuple<flat::kernel::Option<(flat::kernel::Tag)1, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)11, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)10, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)9, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)12, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)13, cute::C<false> > > > >(flat::kernel::FlatKernelTmaWarpSpecializedDeltaRule<flat::collective::FlatMainloopTmaWarpSpecializedDeltaRule<cutlass::bfloat16_t, float, float, cute::tuple<cute::C<64>, cute::C<64>, cute::C<128> >, cute::tuple<long, cute::C<1>, int>, cute::tuple<long, cute::C<1>, int>, cute::tuple<long, cute::C<1>, int>, cute::tuple<long, cute::C<1>, int>, std::tuple<flat::kernel::Option<(flat::kernel::Tag)1, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)11, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)10, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)9, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)12, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)13, cute::C<false> > > >, flat::kernel::IndividualTileScheduler<flat::kernel::GVATag>, std::tuple<flat::kernel::Option<(flat::kernel::Tag)1, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)11, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)10, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)9, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)12, cute::C<true> >, flat::kernel::Option<(flat::kernel::Tag)13, cute::C<false> > > >::Params)",3.17
-22,vllm::moe_forward_shared,custom,fused_moe_kernel,31.99
+22,vllm::moe_forward_shared,custom,fused_moe_kernel,31.88
 23,vllm::moe_forward_shared,custom,topk_gating_softmax_kernel,1.04
 24,vllm::qwen_gdn_attention_core,custom,_causal_conv1d_fwd_kernel,0.99
 25,vllm::qwen_gdn_attention_core,custom,_fused_post_conv_kernel,0.75
 26,vllm::qwen_gdn_attention_core,custom,fused_sigmoid_gating_delta_rule_update_kernel,0.43
-27,vllm::unified_attention_with_output,custom,kernel_unified_attention,13.54
+27,vllm::unified_attention_with_output,custom,kernel_unified_attention,13.56
 28,vllm::unified_kv_cache_update,custom,reshape_and_cache_kernel_flash,0.18
 29,triton_per_fused_1,triton_compiled,triton_per_fused_1,0.89
 30,triton_poi_fused_0,triton_compiled,triton_poi_fused_0,0.61
@@ -52,28 +52,27 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 42,triton_poi_fused_mul_silu_slice_0,triton_compiled,triton_poi_fused_mul_silu_slice_0,0.62
 43,triton_red_fused_1,triton_compiled,triton_red_fused_1,0.02
 44,triton_red_fused_6,triton_compiled,triton_red_fused_6,0.15
-45,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_moe_forward_shared_1,triton_compiled,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_moe_forward_shared_1,0.53
+45,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_moe_forward_shared_1,triton_compiled,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_moe_forward_shared_1,0.52
 46,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_moe_forward_shared_3,triton_compiled,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_moe_forward_shared_3,1.62
-47,vllm::flashinfer_trtllm_fused_allreduce_norm,fused_communication_compute,"void flashinfer::trtllm_allreduce_fusion::allreduce_fusion_kernel_oneshot_lamport<(flashinfer::trtllm_allreduce_fusion::AllReduceFusionPattern)1, __nv_bfloat16, 2, true, true>(flashinfer::trtllm_allreduce_fusion::AllReduceFusionParams<__nv_bfloat16>)",5.51
+47,vllm::flashinfer_trtllm_fused_allreduce_norm,fused_communication_compute,"void flashinfer::trtllm_allreduce_fusion::allreduce_fusion_kernel_oneshot_lamport<(flashinfer::trtllm_allreduce_fusion::AllReduceFusionPattern)1, __nv_bfloat16, 2, true, true>(flashinfer::trtllm_allreduce_fusion::AllReduceFusionParams<__nv_bfloat16>)",5.54
 48,null,unattributed,_causal_conv1d_update_kernel,0.41
 49,null,unattributed,_compute_num_computed_tokens_kernel,<0.01
 50,null,unattributed,_compute_slot_mapping_graph_kernel,0.01
-51,null,unattributed,_fused_recurrent_gated_delta_rule_packed_decode_kernel_fp32_beta,5.28
+51,null,unattributed,_fused_recurrent_gated_delta_rule_packed_decode_kernel_fp32_beta,5.29
 52,null,unattributed,_silu_and_mul_kernel_kernel_rank_2,<0.01
-53,null,unattributed,"void at::native::(anonymous namespace)::CatArrayBatchedCopy_vectorized<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 1, 128, 1, 16, 8>(char*, at::native::(anonymous namespace)::CatArrInputTensorMetadata<at::native::(anonymous namespace)::OpaqueType<2u>, unsigned int, 128, 1>, at::native::(anonymous namespace)::TensorSizeStride<unsigned int, 4u>, int, unsigned int)",<0.01
-54,null,unattributed,fill_scalar_kernel,<0.01
-55,null,unattributed,gemv_kernel,1.38
-56,null,unattributed,memcpy32_post,0.41
-57,null,unattributed,mm_kernel_general_host_tma,6.98
-58,null,unattributed,moe_sum_kernel,0.40
-59,null,unattributed,mul_broadcast_2d_kernel,0.33
-60,null,unattributed,reduce_segments,0.22
-61,null,unattributed,sigmoid_forward_kernel_rank_1,0.29
-62,null,unattributed,zeros_kernel,0.46
-63,moe_align_block_size_stage1,custom,moe_align_block_size_stage1,0.43
-64,moe_align_block_size_stage2_vec,custom,moe_align_block_size_stage2_vec,0.61
-65,moe_align_block_size_stage3,custom,moe_align_block_size_stage3,0.25
-66,moe_align_block_size_stage4,custom,moe_align_block_size_stage4,0.60
-67,symm_mem::two_shot_all_reduce_,communication,"void (anonymous namespace)::two_shot_all_reduce_kernel_inplace<c10::BFloat16, 16, 2>(c10::BFloat16**, unsigned long, unsigned long, unsigned int**, unsigned long, unsigned long)",2.40
-68,record_param_comms,communication,ncclDevKernel_AllGather_RING_LL(ncclDevKernelArgsStorage<4096ul>),0.37
-69,_C_custom_ar::all_reduce,communication,"void vllm::cross_device_reduce_1stage<__nv_bfloat16, 2>(vllm::RankData*, vllm::RankSignals, vllm::Signal*, __nv_bfloat16*, int, int)",0.93
+53,null,unattributed,fill_scalar_kernel,<0.01
+54,null,unattributed,gemv_kernel,1.38
+55,null,unattributed,memcpy32_post,0.41
+56,null,unattributed,mm_kernel_general_host_tma,6.98
+57,null,unattributed,moe_sum_kernel,0.40
+58,null,unattributed,mul_broadcast_2d_kernel,0.33
+59,null,unattributed,reduce_segments,0.22
+60,null,unattributed,sigmoid_forward_kernel_rank_1,0.29
+61,null,unattributed,zeros_kernel,0.46
+62,moe_align_block_size_stage1,custom,moe_align_block_size_stage1,0.43
+63,moe_align_block_size_stage2_vec,custom,moe_align_block_size_stage2_vec,0.61
+64,moe_align_block_size_stage3,custom,moe_align_block_size_stage3,0.25
+65,moe_align_block_size_stage4,custom,moe_align_block_size_stage4,0.60
+66,symm_mem::two_shot_all_reduce_,communication,"void (anonymous namespace)::two_shot_all_reduce_kernel_inplace<c10::BFloat16, 16, 2>(c10::BFloat16**, unsigned long, unsigned long, unsigned int**, unsigned long, unsigned long)",2.46
+67,record_param_comms,communication,ncclDevKernel_AllGather_RING_LL(ncclDevKernelArgsStorage<4096ul>),0.37
+68,_C_custom_ar::all_reduce,communication,"void vllm::cross_device_reduce_1stage<__nv_bfloat16, 2>(vllm::RankData*, vllm::RankSignals, vllm::Signal*, __nv_bfloat16*, int, int)",0.93

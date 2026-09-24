@@ -1,13 +1,13 @@
 {
-  "model": "qwen27",
+  "model": "qwen",
   "concurrency": 64,
   "input_tokens_per_request": 4096,
   "output_tokens_per_request": 256,
   "request_count": 64,
   "total_input_tokens": 262144,
   "total_output_tokens": 16384,
-  "batch_wall_time_seconds": 17.85121674500988,
-  "min_request_latency_seconds": 17.301461292998283,
-  "max_request_latency_seconds": 17.815937097999267,
-  "avg_request_latency_seconds": 17.596147091577222
+  "batch_wall_time_seconds": 17.84524738197797,
+  "min_request_latency_seconds": 17.294328209012747,
+  "max_request_latency_seconds": 17.811639265011763,
+  "avg_request_latency_seconds": 17.591078750718225
 }

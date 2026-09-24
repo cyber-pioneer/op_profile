@@ -27,12 +27,12 @@
 [DEBUG] flag_gems.ops.sub.sub: GEMS SUB
 [DEBUG] flag_gems.ops.unbind.unbind: GEMS UNBIND
 [DEBUG] flag_gems.ops.gelu.gelu: GEMS GELU FORWARD
-[DEBUG] flag_gems.ops.full.full: GEMS FULL
 [DEBUG] flag_gems.ops.randn.randn: GEMS RANDN
 [DEBUG] flag_gems.ops.exp.exp: GEMS EXP
 [DEBUG] flag_gems.ops.rand_like.rand_like: GEMS RAND_LIKE
 [DEBUG] flag_gems.ops._unsafe_view._unsafe_view: GEMS UNSAFE_VIEW
 [DEBUG] flag_gems.ops.alias.alias: GEMS ALIAS
+[DEBUG] flag_gems.ops.full.full: GEMS FULL
 [DEBUG] flag_gems.ops.argmax.argmax: GEMS ARGMAX
 [DEBUG] flag_gems.ops.lt.lt_scalar: GEMS LT SCALAR
 [DEBUG] flag_gems.ops.scalar_tensor.scalar_tensor: GEMS SCALAR_TENSOR

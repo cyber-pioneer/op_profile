@@ -28,7 +28,7 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 13,aten::masked_fill_,aten,"void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::(anonymous namespace)::masked_fill_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, bool)#1}>(at::TensorIteratorBase&, at::native::(anonymous namespace)::masked_fill_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, bool)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::(anonymous namespace)::masked_fill_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, bool)#1}>(at::TensorIteratorBase&, at::native::(anonymous namespace)::masked_fill_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, bool)#1} const&)::{lambda(int)#1})",0.05
 13,aten::masked_fill_,aten,"void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::(anonymous namespace)::masked_fill_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16, bool)#1}>(at::TensorIteratorBase&, at::native::(anonymous namespace)::masked_fill_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16, bool)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::(anonymous namespace)::masked_fill_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16, bool)#1}>(at::TensorIteratorBase&, at::native::(anonymous namespace)::masked_fill_kernel(at::TensorIterator&, c10::Scalar const&)::{lambda()#1}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16, bool)#1} const&)::{lambda(int)#1})",0.03
 14,aten::mm,aten,nvjet_tst_144x64_64x8_2x1_v_bz_TNN,5.99
-14,aten::mm,aten,nvjet_tst_16x64_64x16_4x1_v_bz_splitK_TNN,0.34
+14,aten::mm,aten,nvjet_tst_16x64_64x16_4x1_v_bz_splitK_TNN,0.33
 14,aten::mm,aten,nvjet_tst_192x16_64x8_4x1_v_bz_TNT,0.10
 14,aten::mm,aten,nvjet_tst_192x176_64x4_1x1_h_bz_coopB_TNT,0.46
 14,aten::mm,aten,nvjet_tst_192x192_64x4_2x1_v_bz_coopB_TNN,23.44
@@ -36,7 +36,7 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 14,aten::mm,aten,nvjet_tst_192x8_64x8_4x1_v_bz_TNT,0.12
 14,aten::mm,aten,nvjet_tst_24x64_64x16_2x1_v_bz_TNN,<0.01
 14,aten::mm,aten,nvjet_tst_256x128_64x4_1x2_h_bz_coopA_TNT,2.94
-14,aten::mm,aten,nvjet_tst_256x160_64x4_1x2_h_bz_coopA_TNT,0.54
+14,aten::mm,aten,nvjet_tst_256x160_64x4_1x2_h_bz_coopA_TNT,0.53
 14,aten::mm,aten,nvjet_tst_256x16_64x6_2x1_v_bz_TNT,0.02
 14,aten::mm,aten,nvjet_tst_256x24_64x6_2x1_v_bz_TNT,0.02
 14,aten::mm,aten,nvjet_tst_256x32_64x5_2x1_v_bz_TNT,0.02
@@ -74,7 +74,7 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 21,vllm::qwen_gdn_attention_core,custom,_causal_conv1d_fwd_kernel,0.81
 22,vllm::qwen_gdn_attention_core,custom,_fused_post_conv_kernel,0.54
 23,vllm::qwen_gdn_attention_core,custom,fused_sigmoid_gating_delta_rule_update_kernel,0.37
-24,triton_per_fused_1,triton_compiled,triton_per_fused_1,0.66
+24,triton_per_fused_1,triton_compiled,triton_per_fused_1,0.67
 25,triton_poi_fused_0,triton_compiled,triton_poi_fused_0,0.45
 26,triton_poi_fused_2,triton_compiled,triton_poi_fused_2,<0.01
 27,triton_poi_fused_3,triton_compiled,triton_poi_fused_3,0.03
@@ -93,12 +93,12 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 40,triton_red_fused_1,triton_compiled,triton_red_fused_1,0.02
 41,triton_red_fused_6,triton_compiled,triton_red_fused_6,0.04
 42,triton_red_fused_7,triton_compiled,triton_red_fused_7,0.07
-43,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_1,triton_compiled,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_1,0.09
-44,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_3,triton_compiled,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_3,0.82
-45,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_5,triton_compiled,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_5,1.46
+43,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_1,triton_compiled,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_1,0.08
+44,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_3,triton_compiled,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_3,0.83
+45,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_5,triton_compiled,triton_red_fused__to_copy_add_copy__fused_add_rms_norm_5,1.48
 46,triton_red_fused__to_copy_add_fused_add_rms_norm_1,triton_compiled,triton_red_fused__to_copy_add_fused_add_rms_norm_1,0.25
 47,triton_red_fused__to_copy_add_fused_add_rms_norm_3,triton_compiled,triton_red_fused__to_copy_add_fused_add_rms_norm_3,0.76
-48,null,fused_communication_compute,"void flashinfer::trtllm_allreduce_fusion::allreduce_fusion_kernel_oneshot_lamport<(flashinfer::trtllm_allreduce_fusion::AllReduceFusionPattern)1, __nv_bfloat16, 2, true, true>(flashinfer::trtllm_allreduce_fusion::AllReduceFusionParams<__nv_bfloat16>)",0.63
+48,null,fused_communication_compute,"void flashinfer::trtllm_allreduce_fusion::allreduce_fusion_kernel_oneshot_lamport<(flashinfer::trtllm_allreduce_fusion::AllReduceFusionPattern)1, __nv_bfloat16, 2, true, true>(flashinfer::trtllm_allreduce_fusion::AllReduceFusionParams<__nv_bfloat16>)",0.65
 49,vllm::flashinfer_trtllm_fused_allreduce_norm,fused_communication_compute,"void flashinfer::trtllm_allreduce_fusion::allreduce_fusion_kernel_twoshot_sync<(flashinfer::trtllm_allreduce_fusion::AllReduceFusionPattern)1, __nv_bfloat16, 2, true>(flashinfer::trtllm_allreduce_fusion::AllReduceFusionParams<__nv_bfloat16>, std::array<int, 2>, std::array<int, 2>)",0.20
 50,null,unattributed,_causal_conv1d_update_kernel,0.25
 51,null,unattributed,_compute_slot_mapping_kernel,0.02
