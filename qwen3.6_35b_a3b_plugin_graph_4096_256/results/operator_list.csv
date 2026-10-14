@@ -12,7 +12,7 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 6,aten::copy_,aten,"void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",0.21
 7,aten::embedding,aten,embedding_kernel,0.01
 8,aten::exp,aten,exp_func_kernel_rank_1,0.03
-9,aten::fill_,aten,fill_scalar_kernel,<0.01
+9,aten::fill_,aten,fill_scalar_kernel,0.01
 10,aten::full,aten,full_func_scalar_kernel_rank_1,<0.01
 11,aten::gt,aten,gt_func_scalar_kernel_rank_1,<0.01
 12,aten::index,aten,"void at::native::index_elementwise_kernel<128, 4, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1}>(long, at::native::gpu_index_kernel<at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1}>(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>, at::native::index_kernel_impl<at::native::OpaqueType<2> >(at::TensorIteratorBase&, c10::ArrayRef<long>, c10::ArrayRef<long>)::{lambda(char*, char const*, long)#1} const&, bool)::{lambda(int)#1})",<0.01
@@ -20,11 +20,11 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 12,aten::index,aten,"void at::native::vectorized_gather_kernel<16, long>(char*, char*, long*, int, long, long, long, long, bool)",0.08
 13,aten::masked_fill_,aten,masked_fill_kernel_kernel_rank_2,0.02
 13,aten::masked_fill_,aten,masked_fill_kernel_kernel_rank_4,0.05
-14,aten::mm,aten,gemv_kernel,0.40
-14,aten::mm,aten,mm_kernel_general_host_tma,11.24
-15,aten::mul,aten,mul_broadcast_2d_kernel,0.49
+14,aten::mm,aten,gemv_kernel,1.78
+14,aten::mm,aten,mm_kernel_general_host_tma,18.22
+15,aten::mul,aten,mul_broadcast_2d_kernel,0.83
 16,aten::scatter_,aten,_scatter_jit_function,<0.01
-17,aten::sigmoid,aten,sigmoid_forward_kernel_rank_1,0.03
+17,aten::sigmoid,aten,sigmoid_forward_kernel_rank_1,0.32
 18,aten::sub,aten,sub_func_tensor_scalar_kernel_rank_1,<0.01
 19,aten::zero_,aten,zeros_kernel,0.23
 20,aten::zeros,aten,zeros_kernel,0.04
@@ -60,19 +60,14 @@ operator_id,operator_name,operator_kind,kernel_name,kernel_time_percent(%)
 50,null,unattributed,_compute_slot_mapping_graph_kernel,0.01
 51,vllm::qwen_gdn_attention_core,eager-refer,_fused_recurrent_gated_delta_rule_packed_decode_kernel_fp32_beta,5.29
 52,vllm::moe_forward_shared,eager-refer,_silu_and_mul_kernel_kernel_rank_2,<0.01
-53,aten::fill_,eager-refer,fill_scalar_kernel,<0.01
-54,aten::mm,eager-refer,gemv_kernel,1.38
-55,null,unattributed,memcpy32_post,0.41
-56,aten::mm,eager-refer,mm_kernel_general_host_tma,6.98
-57,vllm::moe_forward_shared,eager-refer,moe_sum_kernel,0.40
-58,aten::mul,eager-refer,mul_broadcast_2d_kernel,0.33
-59,vllm::unified_attention_with_output,eager-refer,reduce_segments,0.22
-60,aten::sigmoid,eager-refer,sigmoid_forward_kernel_rank_1,0.29
-61,"aten::zero_,aten::zeros",eager-refer,zeros_kernel,0.46
-62,moe_align_block_size_stage1,custom,moe_align_block_size_stage1,0.43
-63,moe_align_block_size_stage2_vec,custom,moe_align_block_size_stage2_vec,0.61
-64,moe_align_block_size_stage3,custom,moe_align_block_size_stage3,0.25
-65,moe_align_block_size_stage4,custom,moe_align_block_size_stage4,0.60
-66,symm_mem::two_shot_all_reduce_,communication,"void (anonymous namespace)::two_shot_all_reduce_kernel_inplace<c10::BFloat16, 16, 2>(c10::BFloat16**, unsigned long, unsigned long, unsigned int**, unsigned long, unsigned long)",2.46
-67,record_param_comms,communication,ncclDevKernel_AllGather_RING_LL(ncclDevKernelArgsStorage<4096ul>),0.37
-68,_C_custom_ar::all_reduce,communication,"void vllm::cross_device_reduce_1stage<__nv_bfloat16, 2>(vllm::RankData*, vllm::RankSignals, vllm::Signal*, __nv_bfloat16*, int, int)",0.93
+53,null,unattributed,memcpy32_post,0.41
+54,vllm::moe_forward_shared,eager-refer,moe_sum_kernel,0.40
+55,vllm::unified_attention_with_output,eager-refer,reduce_segments,0.22
+56,"aten::zero_,aten::zeros",eager-refer,zeros_kernel,0.46
+57,moe_align_block_size_stage1,custom,moe_align_block_size_stage1,0.43
+58,moe_align_block_size_stage2_vec,custom,moe_align_block_size_stage2_vec,0.61
+59,moe_align_block_size_stage3,custom,moe_align_block_size_stage3,0.25
+60,moe_align_block_size_stage4,custom,moe_align_block_size_stage4,0.60
+61,symm_mem::two_shot_all_reduce_,communication,"void (anonymous namespace)::two_shot_all_reduce_kernel_inplace<c10::BFloat16, 16, 2>(c10::BFloat16**, unsigned long, unsigned long, unsigned int**, unsigned long, unsigned long)",2.46
+62,record_param_comms,communication,ncclDevKernel_AllGather_RING_LL(ncclDevKernelArgsStorage<4096ul>),0.37
+63,_C_custom_ar::all_reduce,communication,"void vllm::cross_device_reduce_1stage<__nv_bfloat16, 2>(vllm::RankData*, vllm::RankSignals, vllm::Signal*, __nv_bfloat16*, int, int)",0.93
